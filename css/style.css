@@ -1,0 +1,172 @@
+/* ----------------- */
+/* custom properties */
+/* ---------------- */
+
+:root {
+  /* colors */
+  --clr-primary: hsl(193, 67%, 34%);
+  --clr-secondary: hsl(202, 90%, 12%);
+
+  --clr-light: hsl(20, 53%, 97%);
+  --clr-accent: rgb(247 68 78);
+
+  /* font size */
+  --fs-300: 1rem;
+  --fs-400: 1.5rem;
+  --fs-500: 2rem;
+  --fs-600: 2.4rem;
+  --fs-700: 3rem;
+  --fs-800: 5rem;
+
+  --size-300: 0.6rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 2.5rem;
+  --size-800: 3rem;
+  --size-900: 5rem;
+
+  /* font family */
+  --ff-header: "Press Start 2P", cursive;
+  --ff-body: "Roboto", sans-serif;
+}
+
+/* ----------------- */
+/* utility classes  */
+/* ---------------- */
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.padding {
+  padding: var(--size-400);
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: hsla(202, 90%, 12%, 0.4);
+  border: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: hsla(202, 90%, 12%, 0.6);
+}
+
+.btn-square {
+  padding: var(--size-500);
+}
+
+.sign {
+  font-size: var(--size-900);
+  padding: var(--size-500);
+}
+
+.hidden {
+  display: none;
+}
+
+.bg-color {
+  background-color: var(--clr-primary);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+  font-weight: bold;
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+  font-weight: bold;
+}
+
+body {
+  font-family: var(--ff-body);
+  line-height: 1.5;
+  color: var(--clr-light);
+  position: relative;
+}
+
+/* ----------------- */
+/* general styling  */
+/* ---------------- */
+
+header {
+  background-color: var(--clr-secondary);
+  color: var(--clr-accent);
+  padding: var(--size-800);
+  font-family: var(--ff-header);
+  font-size: var(--size-700);
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: var(--size-600);
+  justify-content: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-700);
+  margin-top: var(--size-400);
+  margin-bottom: var(--size-600);
+}
+
+.score-board {
+  padding: var(--size-500);
+}
+
+.restart-btn {
+  padding: var(--size-300);
+  border: none;
+  font-size: var(--fs-400);
+  font-weight: bold;
+  border-radius: var(--size-300);
+}
+
+.restart-btn:hover,
+.restart-btn:focus-visible {
+  background-color: hsla(202, 90%, 12%, 0.6);
+  color: var(--clr-light);
+}
+
+/* modal class */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 12rem;
+  border-radius: var(--size-300);
+  background-color: hsla(202, 90%, 12%, 0.7);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding-top: 2.5rem;
+  z-index: 10;
+}
+
+.modal-title {
+  font-size: var(--fs-500);
+  margin-bottom: var(--size-400);
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 5;
+}
